@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "fairies-app",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -41,6 +41,10 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "protractor": "~5.1.2",
+    "postcss": "^5.2.10",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-loader": "^1.2.2",
+    "postcss-smart-import": "^0.6.7",
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"

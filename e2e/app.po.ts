@@ -6,6 +6,6 @@ export class MyAppPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('fairies-app h1')).getText();
   }
 }
