@@ -7,6 +7,9 @@
   color: white;
   font-size: 15px;
   font-family: sans-serif;
+  @media #{$phone} {
+    font-size: 13px;
+  }
   .nav-list {
     text-align: justify;
     margin-top: -1px;

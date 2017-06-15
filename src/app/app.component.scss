@@ -1,0 +1,20 @@
+@import "./common/scss/colors";
+@import "./common/scss/variables";
+@import "./common/scss/index";
+
+.c-fairies-app {
+  .content-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: calc(100vh - 197.33px);
+    background: url(./common/images/background-1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  .footer-wrapper {
+    position: relative;
+    height: 26px;
+  }
+}

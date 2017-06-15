@@ -1,3 +1,39 @@
 <div class="c-homepage">
-
+  <div class="main-description">
+    <p>
+      Если Вас тревожит какая-то неудача в жизни, и Вы
+      не можете с ней справиться, с нашей помощью Вы
+      сможете обнаружить причину проблемы и способ ее решения.
+    </p>
+    <p>
+      Также поможем раскрыть внутренние силы,
+      наладить отношения с любимым человеком,
+      с денежными вопросами, воплощением мечты в реальность.
+    </p>
+    <p>
+      С помощью кофейной гущи мы раскроем
+      Ваши темные грани и поможем их рассмотреть
+      более детально, что значительно ускорит процесс решения
+      важных для Вас проблем. Вы - хозяин своей жизни и
+      заслуживаете самое лучшее.
+    </p>
+  </div>
+  <div class="content">
+    <button class="contact-us-btn" (click)="toggleModal(true)">Связаться с нами</button>
+    <modal-window
+      [visible]="visibleModal"
+      (visibilityChange)="toggleModal($event)"
+    >
+      <form action="javascript:void(0)">
+        <fieldset>
+          <label>Ваше имя*</label>
+          <input type="text">
+        </fieldset>
+        <fieldset>
+          <label>E-mail*</label>
+          <input type="email">
+        </fieldset>
+      </form>
+    </modal-window>
+  </div>
 </div>

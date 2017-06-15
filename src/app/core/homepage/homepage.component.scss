@@ -1,0 +1,35 @@
+@import "../../common/scss/colors";
+@import "../../common/scss/variables";
+@import "../../common/scss/index";
+
+.c-homepage {
+  display: block;
+  .main-description {
+    display: inline-block;
+    width: 23%;
+    background-color: $light-white;
+    padding: 20px 25px;
+    font-family: sans-serif;
+    min-height: calc(100vh - 197.33px);
+    p {
+      margin-bottom: 7px;
+      line-height: 20px;
+      font-size: 16px;
+    }
+  }
+  .content {
+    display: inline-block;
+    .contact-us-btn {
+      margin: 0 auto;
+    }
+  }
+  /deep/ .c-modal-window {
+    fieldset {
+      label {
+        font-size: 13px;
+        width: 100px;
+        display: inline-block;
+      }
+    }
+  }
+}

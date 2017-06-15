@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './homepage.component.html'
 })
 export class HomepageComponent {
+  public visibleModal: boolean;
+
+  public toggleModal(visible: boolean) {
+    this.visibleModal = visible;
+  }
 }
