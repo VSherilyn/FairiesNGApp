@@ -18,7 +18,7 @@ export class ModalWindowComponent {
 
   @HostListener('document:click', ['$event.target'])
   public onDocumentClick(target: any): void {
-    if(!this.modal.nativeElement.contains(target)) {
+    if (!this.modal.nativeElement.contains(target)) {
       this.closeModal();
     }
   }

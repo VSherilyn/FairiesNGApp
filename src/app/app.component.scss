@@ -12,6 +12,10 @@
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    box-shadow: 0 66px 120px 0 rgba(0, 0, 0, .7) inset;
+    @media #{$phone} {
+      min-height: calc(100vh - 166.33px);
+    }
   }
   .footer-wrapper {
     position: relative;

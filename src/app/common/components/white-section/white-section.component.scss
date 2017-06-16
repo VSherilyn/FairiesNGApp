@@ -1,0 +1,25 @@
+@import "../../scss/colors";
+@import "../../scss/variables";
+@import "../../scss/index";
+
+.c-white-section {
+  display: inline-block;
+  width: 23%;
+  background-color: $light-white;
+  padding: 20px 25px;
+  font-family: sans-serif;
+  min-height: calc(100vh - 197.33px);
+  vertical-align: top;
+  @media #{$desktop} {
+    width: 27%;
+  }
+  @media #{$tablet} {
+    width: 30%;
+  }
+  @media #{$phone} {
+    width: 100%;
+    min-height: 0;
+    display: block;
+    margin-bottom: 10px;
+  }
+}

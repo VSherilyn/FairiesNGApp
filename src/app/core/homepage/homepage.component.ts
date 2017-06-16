@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class HomepageComponent {
   public visibleModal: boolean;
 
-  public toggleModal(visible: boolean) {
+  public toggleModal(visible: boolean, event) {
     this.visibleModal = visible;
+    event.stopPropagation();
   }
 }

@@ -4,13 +4,7 @@
 
 .c-homepage {
   display: block;
-  .main-description {
-    display: inline-block;
-    width: 23%;
-    background-color: $light-white;
-    padding: 20px 25px;
-    font-family: sans-serif;
-    min-height: calc(100vh - 197.33px);
+  /deep/ .c-white-section {
     p {
       margin-bottom: 7px;
       line-height: 20px;
@@ -25,10 +19,20 @@
   }
   /deep/ .c-modal-window {
     fieldset {
+      margin-bottom: 6px;
       label {
         font-size: 13px;
         width: 100px;
         display: inline-block;
+      }
+      textarea {
+        width: calc(100% - 105px);
+        height: 200px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .submit {
+        float: right;
       }
     }
   }

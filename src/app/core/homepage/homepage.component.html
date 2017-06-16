@@ -1,5 +1,5 @@
 <div class="c-homepage">
-  <div class="main-description">
+  <white-section>
     <p>
       Если Вас тревожит какая-то неудача в жизни, и Вы
       не можете с ней справиться, с нашей помощью Вы
@@ -17,9 +17,9 @@
       важных для Вас проблем. Вы - хозяин своей жизни и
       заслуживаете самое лучшее.
     </p>
-  </div>
+  </white-section>
   <div class="content">
-    <button class="contact-us-btn" (click)="toggleModal(true)">Связаться с нами</button>
+    <button class="contact-us-btn" (click)="toggleModal(true, $event)">Связаться с нами</button>
     <modal-window
       [visible]="visibleModal"
       (visibilityChange)="toggleModal($event)"
@@ -32,6 +32,13 @@
         <fieldset>
           <label>E-mail*</label>
           <input type="email">
+        </fieldset>
+        <fieldset>
+          <label>Сообщение*</label>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset class="clearfix">
+          <button type="submit" class="submit">Отправить</button>
         </fieldset>
       </form>
     </modal-window>
