@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from "@angular/forms";
 
 import { CommonComponentsModule } from '../../common/components/common-components.module';
 
@@ -15,7 +16,8 @@ export const routes = [
   imports: [
     CommonModule,
     RouterModule,
-    CommonComponentsModule
+    CommonComponentsModule,
+    FormsModule
   ],
   declarations: [
     UserProfileComponent,

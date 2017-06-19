@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { CommonComponentsModule } from './common/components/common-components.module';
 import { CommonServicesModule } from './common/services/common-services.module';
@@ -29,7 +30,9 @@ import { ROUTES } from './app.routes';
     CommonServicesModule,
     HomepageModule,
     RouterModule.forRoot(ROUTES),
-    UserProfileModule
+    UserProfileModule,
+    HttpModule,
+    JsonpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,12 +5,38 @@
 .c-user-profile__predictions {
   color: white;
   font-family: sans-serif;
-  h2 {
+  h4 {
     margin-bottom: 10px;
   }
-  ol {
+  ul {
     li {
-      list-style-type: upper-roman;
+      list-style-type: disc;
+      margin-bottom: 5px;
+    }
+  }
+  .add-new {
+    margin-top: 11px;
+  }
+  /deep/ .c-modal-window {
+    fieldset {
+      margin-bottom: 6px;
+      label {
+        font-size: 13px;
+        width: 100px;
+        display: inline-block;
+      }
+      textarea {
+        width: calc(100% - 105px);
+        height: 200px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .reset {
+        float: left;
+      }
+      .submit {
+        float: right;
+      }
     }
   }
 }

@@ -1,0 +1,28 @@
+{
+  "data": {
+    "predictions": [
+      {
+        "id": 1,
+        "author": "Bomj",
+        "content": "You will die"
+      },
+      {
+        "id": 2,
+        "author": "Bomj2",
+        "content": "Everyone will die"
+      },
+      {
+        "author": "Jopa",
+        "content": "Aaaaaaaa"
+      },
+      {
+        "author": "Bomj3",
+        "content": "Ololololo"
+      },
+      {
+        "author": "ololo",
+        "content": "lololo"
+      }
+    ]
+  }
+}
