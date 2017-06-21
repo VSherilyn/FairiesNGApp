@@ -1,36 +1,48 @@
 <div class="c-user-profile__predictions">
-  <h2>Предсказания</h2>
-  <h4>Сохраненных предсказаний: {{ predictionsService.predictions.length }}</h4>
-  <ul *ngFor="let prediction of predictionsService.predictions">
-    <li>
-      <p>{{ prediction.content }}</p>
-      <span>({{ prediction.author }})</span>
-    </li>
-  </ul>
-  <button (click)="toggleModal(true, $event)" class="add-new">Записать предсказание</button>
-  <modal-window
-    [visible]="visibleModal"
-    (visibilityChange)="toggleModal($event)"
-  >
-    <form (ngSubmit)="createPrediction($event); toggleModal(false, $event)">
-      <fieldset>
-        <label for="predictionAuthor">Автор*</label>
-        <input type="text"
-               #predictionAuthorInput
-               id="predictionAuthor"
-               required
-        >
-      </fieldset>
-      <fieldset>
-        <label>Содежание</label>
-        <textarea
-          #predictionContentInput
-        ></textarea>
-      </fieldset>
-      <fieldset class="clearfix">
-        <button type="reset" class="reset" (click)="toggleModal(false, $event)">Отмена</button>
-        <button type="submit" class="submit">Добавить к списку</button>
-      </fieldset>
-    </form>
-  </modal-window>
+  <div class="all-predictions">
+    <h2>Предсказания</h2>
+    <h4>Сохраненных предсказаний: {{ predictionsService.predictions.length }}</h4>
+    <ul *ngFor="let prediction of predictionsService.predictions; let $index = index">
+      <li>
+        <p class="prediction-content" (click)="openPrediction($index)">{{ prediction.content }}</p>
+        <span>({{ prediction.author }})</span>
+        <div class="delete-prediction">
+          <div class="remove-icn"></div>
+        </div>
+      </li>
+    </ul>
+    <button (click)="toggleModal(true, $event)" class="add-new">Записать предсказание</button>
+    <modal-window
+      [visible]="visibleModal"
+      (visibilityChange)="toggleModal($event)"
+    >
+      <form (ngSubmit)="createPrediction($event)">
+        <fieldset>
+          <label for="predictionAuthor">Автор*</label>
+          <input type="text"
+                 #predictionAuthorInput
+                 id="predictionAuthor"
+                 required
+          >
+          <p class="error-message" *ngIf="authorFieldError">Пожалуйста, укажите автора предсказания</p>
+        </fieldset>
+        <fieldset>
+          <label>Содержание*</label>
+          <textarea
+            #predictionContentInput
+            required
+          ></textarea>
+          <p class="error-message" *ngIf="contentFieldError">Пожалуйста, запишите предсказание</p>
+        </fieldset>
+        <fieldset class="clearfix">
+          <button type="submit" class="submit">Добавить к списку</button>
+          <button type="reset" class="reset" (click)="toggleModal(false, $event)">Отмена</button>
+        </fieldset>
+      </form>
+    </modal-window>
+  </div>
+  <div class="opened-prediction" *ngIf="openedPredictionAuthor || openedPredictionText">
+    <h2>{{ this.openedPredictionAuthor }}:</h2>
+    <p>{{ this.openedPredictionText }}</p>
+  </div>
 </div>

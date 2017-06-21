@@ -4,12 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve && npm run json-server",
+    "start": "ng serve | npm run json-server",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "json-server": "json-server --port 3002 --watch src/assets/mock-data/predictions.json"
+    "json-server": "json-server src/assets/mock-data/predictions.json --port 3002"
   },
   "private": true,
   "dependencies": {

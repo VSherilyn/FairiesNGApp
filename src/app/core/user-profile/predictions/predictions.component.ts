@@ -14,6 +14,10 @@ export class PredictionsComponent {
   @ViewChild('predictionContentInput') contentInput: ElementRef;
 
   public visibleModal: boolean;
+  public authorFieldError: boolean = false;
+  public contentFieldError: boolean = false;
+  public openedPredictionText: string;
+  public openedPredictionAuthor: string;
 
   public newPrediction: {
     author?: string,
@@ -21,8 +25,13 @@ export class PredictionsComponent {
   } = {};
 
   public toggleModal(visible: boolean, event) {
-    this.visibleModal = visible;
     event.stopPropagation();
+    this.visibleModal = visible;
+
+    this.authorInput.nativeElement.value = '';
+    this.authorFieldError = false;
+    this.contentInput.nativeElement.value = '';
+    this.contentFieldError = false;
   }
 
   constructor(public predictionsService: PredictionsService) {
@@ -30,9 +39,24 @@ export class PredictionsComponent {
 
   public createPrediction(event: Event) {
     event.preventDefault();
-    this.newPrediction.author = this.authorInput.nativeElement.value.toString();
-    this.newPrediction.content = this.contentInput.nativeElement.value.toString();
+    if (!this.authorInput.nativeElement.value) {
+      this.authorFieldError = true;
+      if (!this.contentInput.nativeElement.value) {
+        this.contentFieldError = true;
+      }
+    } else if (!this.contentInput.nativeElement.value) {
+      this.contentFieldError = true;
+    } else {
+      this.newPrediction.author = this.authorInput.nativeElement.value.toString();
+      this.newPrediction.content = this.contentInput.nativeElement.value.toString();
 
-    this.predictionsService.createPrediction(this.newPrediction);
+      this.predictionsService.createPrediction(this.newPrediction);
+      this.toggleModal(false, event);
+    }
+  }
+
+  public openPrediction(index) {
+    this.openedPredictionText = this.predictionsService.predictions[index].content;
+    this.openedPredictionAuthor = this.predictionsService.predictions[index].author;
   }
 }

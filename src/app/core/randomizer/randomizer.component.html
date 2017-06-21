@@ -1,0 +1,10 @@
+<div class="c-randomizer container">
+  <div class="content">
+    <h3>Задайте вопрос и нажмите "предсказать":</h3>
+    <div class="answer">
+      <span class="undefined" *ngIf="!this.response">?</span>
+      <span *ngIf="this.response">{{ this.response }}</span>
+    </div>
+    <button (click)="getAnswer()">Предсказать</button>
+  </div>
+</div>

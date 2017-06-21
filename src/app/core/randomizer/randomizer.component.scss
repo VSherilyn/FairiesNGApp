@@ -1,0 +1,48 @@
+@import "../../common/scss/colors";
+@import "../../common/scss/variables";
+@import "../../common/scss/index";
+
+.c-randomizer {
+  display: block;
+  position: relative;
+  padding: 120px 0 80px;
+  @media #{$phone} {
+    padding: 50px 3.125%;
+  }
+  .content {
+    position: relative;
+    display: block;
+    width: 450px;
+    margin: 0 auto;
+    background-color: $light-white;
+    padding: 25px;
+    @media #{$phone} {
+      width: 100%;
+      max-width: 450px;
+    }
+    h3 {
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 10px auto 0;
+      display: block;
+    }
+    .answer {
+      text-align: center;
+      display: block;
+      margin: 0 auto 30px;
+      font-size: 40px;
+      font-weight: 700;
+      font-family: sans-serif;
+      @media #{$phone} {
+        font-size: 40px;
+      }
+      .undefined {
+        font-size: 120px;
+        @media #{$phone} {
+          font-size: 80px;
+        }
+      }
+    }
+  }
+}

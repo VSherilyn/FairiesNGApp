@@ -28,6 +28,5 @@ export class PredictionsService {
     let options = new RequestOptions({headers: headers});
     this.http.post('http://localhost:3002/data', {predictions: this.predictions}, options)
       .subscribe();
-    debugger;
   }
 }

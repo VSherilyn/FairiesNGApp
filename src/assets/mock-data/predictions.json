@@ -20,8 +20,12 @@
         "content": "Ololololo"
       },
       {
-        "author": "ololo",
-        "content": "lololo"
+        "author": "Author",
+        "content": "Prediction"
+      },
+      {
+        "author": "Предсказание",
+        "content": "Автор"
       }
     ]
   }

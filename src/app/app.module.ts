@@ -16,6 +16,7 @@ import { UserProfileModule } from './core/user-profile/user-profile.module';
 
 import './common/scss/index.scss';
 import { ROUTES } from './app.routes';
+import { RandomizerModule } from "./core/randomizer/randomizer.module";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ROUTES } from './app.routes';
     CommonComponentsModule,
     CommonServicesModule,
     HomepageModule,
+    RandomizerModule,
     RouterModule.forRoot(ROUTES),
     UserProfileModule,
     HttpModule,
