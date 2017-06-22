@@ -2,8 +2,8 @@
   <div class="all-predictions">
     <h2>Предсказания</h2>
     <h4>Сохраненных предсказаний: {{ predictionsService.predictions.length }}</h4>
-    <ul *ngFor="let prediction of predictionsService.predictions; let $index = index">
-      <li>
+    <ul>
+      <li *ngFor="let prediction of predictionsService.predictions; let $index = index">
         <p class="prediction-content" (click)="openPrediction($index)">{{ prediction.content }}</p>
         <span>({{ prediction.author }})</span>
         <div class="delete-prediction">

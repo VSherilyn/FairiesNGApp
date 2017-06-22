@@ -8,7 +8,6 @@
   background-color: $light-white;
   padding: 20px 25px;
   font-family: sans-serif;
-  min-height: calc(100vh - 197.33px);
   vertical-align: top;
   @media #{$desktop} {
     width: 27%;
@@ -18,7 +17,7 @@
   }
   @media #{$phone} {
     width: 100%;
-    min-height: 0;
+    min-height: 0 !important;
     display: block;
     margin-bottom: 10px;
   }
